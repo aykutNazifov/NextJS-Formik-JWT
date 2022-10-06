@@ -1,0 +1,170 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Register
+
+.register {
+  background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .link {
+    display: block;
+    margin-top: 20px;
+
+    a {
+      color: #57b846;
+    }
+  }
+
+  button {
+    background: #57b846;
+    border-radius: 20px;
+    padding: 0 33px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    border: 1px solid #57b846;
+    outline: none;
+    transition: 0.3s all ease;
+
+    &:hover {
+      background: transparent;
+      color: #57b846;
+      box-shadow: 0px 8px 20px 0px #57b846;
+    }
+  }
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #74ebd5;
+  background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+
+  .link {
+    display: block;
+    margin-top: 20px;
+
+    a {
+      color: #ff4500;
+    }
+  }
+
+  button {
+    background: #ff4500;
+    border-radius: 20px;
+    padding: 0 33px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    border: 1px solid #ff4500;
+    outline: none;
+    transition: 0.3s all ease;
+
+    &:hover {
+      background: transparent;
+      color: #ff4500;
+      box-shadow: 0px 8px 20px 0px #ff4500;
+    }
+  }
+}
+
+.Form_Box {
+  width: 100%;
+  max-width: 780px;
+  background: #000;
+  color: #fff;
+  box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 15%);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+
+  .Image {
+    width: 50%;
+    height: auto;
+    position: relative;
+  }
+  .Form_Content {
+    width: 50%;
+    padding: 57px 65px;
+    padding-bottom: 65px;
+
+    h1 {
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 36px;
+    }
+
+    .Form_Input {
+      margin-bottom: 55px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+
+      .Error {
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        color: red;
+      }
+
+      label {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        transition: 0.3s top ease;
+        z-index: -1;
+      }
+
+      input {
+        font-size: 16px;
+        padding: 5px 0;
+        color: #ccc;
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+        font-family: inherit;
+
+        &:focus + label {
+          z-index: 1;
+          top: -20px;
+        }
+        &:focus::placeholder {
+          color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.Api_Error {
+  margin: 15px 0;
+  color: red;
+}
